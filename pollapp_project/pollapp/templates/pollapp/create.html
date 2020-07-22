@@ -1,0 +1,79 @@
+{% extends "pollapp/base.html" %}
+
+
+{% block title %}Create Poll{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Create A New Poll</h3>
+            </div>
+
+            <form method="POST">
+                {% csrf_token %}
+                <div class="panel-body">
+                    <div class="col">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="question">Enter Poll Question : </label>
+                                &nbsp{{ form.question }}
+                                <br />  <br />  <br />
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="option1">Option 1 : </label>
+                                &nbsp{{ form.option_one }}
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="option2">Option 2 : </label>
+                                &nbsp{{ form.option_two }}
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="option3">Option 3 : </label>
+                                &nbsp{{ form.option_three }}
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label for="option4">Option 4 : </label>
+                            &nbsp{{ form.option_four }}
+
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- <div class="col"> -->
+                        <!-- <hr /> -->
+                        <!-- <div class="col-lg-12"> -->
+                          <!-- <div class="form-group"> -->
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <button type="submit" class="btn btn-info">Submit</button>
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
